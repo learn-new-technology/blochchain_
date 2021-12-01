@@ -26,30 +26,3 @@ class BlockChain:
             if current_chain.previous_block_hash != prev_block.block_hash:
                 return False
         return True
-
-
-a = BlockChain(5)
-
-a.add_block({
-    "name": "THI-EN-HI",
-    "age": 18,
-    "value": "1000$"
-})
-
-a.add_block({
-    "name": "KIM",
-    "age": 20,
-    "value": "5000$"
-})
-
-a.add_block({
-    "name": "HI",
-    "age": 7,
-    "value": "99999$"
-})
-
-print(a.is_valid())
-
-# for i in a.chain:
-#     print(i.block_hash , i.previous_block_hash)
-#     print("-----------------------------------")
